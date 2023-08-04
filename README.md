@@ -19,7 +19,7 @@ npm run dev
 ```
 
 ## Principales tecnologías utilizadas
-- React JS
+- React JS + Vite
 - Tailwind
 
 ## Funcionalidades extras:
