@@ -1,5 +1,6 @@
 import { colors } from "../../../utilsGeneral";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const navigations = [
     {
@@ -26,7 +27,7 @@ export const LinkNavigations = () =>{
         <>
         {
             navigations.map((element, index)=>(
-                <>
+                <React.Fragment key={index}>
                 {element.label === 'LOGIN'?
                     <>
                         <div key={`${index}LOGIN`} className="md:w-2 md:h-2 md:rounded-full w-full border" style={{backgroundColor:element.color}}></div>
@@ -35,7 +36,7 @@ export const LinkNavigations = () =>{
                 :
                     <Link className="font-barlowCondensed font-bold text-lg hover:underline" key={index} to={element.path} style={{color:element.color}} >{element.label}</Link>
                 }
-                </>
+                </React.Fragment>
             ))
         }    
         </>
