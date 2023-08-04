@@ -1,8 +1,26 @@
-# React + Vite
+# Prueba tecnica Iglobal Ventures SpA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En los siguientes pasos, comentaré acerca de la instalación y set-up para la funcionalidad del proyecto.
 
-Currently, two official plugins are available:
+## Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema.
+
+1. Clona este repositorio o descárgalo como ZIP.
+2. Navega a la carpeta del proyecto.
+3. Instala las dependencias con el siguiente comando:
+
+```bash
+npm install
+``````
+4. Para iniciar en modo desarrollo, una vez instaladas las dependencias, se utiliza el siguiente comando:
+```bash
+npm run dev
+```
+
+## Principales tecnologías utilizadas
+- React JS
+- Tailwind
+
+## Funcionalidades extras:
+Además de cumplir con los requisitos esperados, añadi un filtrador de datos en base a datos ingresados por el usuario, actualizando cada vez que el usuario realiza una acción, y un botón para resetear el estado.
