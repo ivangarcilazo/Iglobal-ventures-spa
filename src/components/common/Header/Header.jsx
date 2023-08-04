@@ -11,7 +11,7 @@ export default function Header(){
 
     return(
         <>
-            <header className="h-24 w-full absolute flex items-center justify-between pl-7 pr-7 md:h-32 md:justify-between">
+            <header className="h-24 w-full absolute flex items-center justify-between pl-7 pr-7 md:h-32 md:justify-between z-10">
                 <div className='md:ml-20'>
                     <img src={logo} width={30} loading='lazy' alt='logo' />
                 </div>

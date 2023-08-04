@@ -29,7 +29,7 @@ export const LinkNavigations = () =>{
                 <>
                 {element.label === 'LOGIN'?
                     <>
-                        <div className="md:w-2 md:h-2 md:rounded-full w-full border" style={{backgroundColor:element.color}}></div>
+                        <div key={`${index}LOGIN`} className="md:w-2 md:h-2 md:rounded-full w-full border" style={{backgroundColor:element.color}}></div>
                         <Link className="font-barlowCondensed font-bold text-lg hover:underline" key={index} to={element.path} style={{color:element.color}} >{element.label}</Link>
                     </>
                 :
