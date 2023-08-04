@@ -1,7 +1,4 @@
 import { LinkNavigations } from "./LinkNavigations"
-
-
-
 export default function MenuCommon(){
     return(
         <div className='flex items-center justify-center w-1/2'>
