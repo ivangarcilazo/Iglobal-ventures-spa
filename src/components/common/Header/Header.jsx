@@ -5,6 +5,7 @@ import iconHamburger from '../../../assets/icon-hamburger.svg'
 import iconClose from '../../../assets/icon-close.svg'
 import MenuDropDown from './components/MenuDropDown'
 import MenuCommon from './components/MenuCommon'
+import { Link } from 'react-router-dom'
 
 export default function Header(){
     const [ openMenu, setOpenMenu ] = useState(false)
@@ -12,9 +13,9 @@ export default function Header(){
     return(
         <>
             <header className="h-24 w-full absolute flex items-center justify-between pl-7 pr-7 md:h-32 md:justify-between z-10">
-                <div className='md:ml-20'>
+                <Link className='md:ml-32 ml-12' to={'/'}>
                     <img src={logo} width={30} loading='lazy' alt='logo' />
-                </div>
+                </Link>
                 <MenuCommon />
 
                 <button onClick={()=>setOpenMenu(!openMenu)} className='flex md:hidden'>

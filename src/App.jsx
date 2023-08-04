@@ -12,6 +12,11 @@ function App() {
               <Home />
             </Layout>} 
           />
+          <Route path="*"  element={
+            <Layout>
+              <Home />
+            </Layout>} 
+          />
         </Routes>
       </Router>
   )

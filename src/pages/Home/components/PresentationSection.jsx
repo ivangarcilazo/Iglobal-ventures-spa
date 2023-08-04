@@ -21,7 +21,7 @@ export default function PresentationSection(){
 function ImageContainer(){
     return(
         <article className='w-full h-96 overflow-hidden flex items-center justify-start md:justify-self-end md:h-full md:w-1/2'>
-            <img src={devices} alt='' style={{transform:'scale(1.2)', left:'20%'}} className='relative md:block'/>
+            <img src={devices} alt='' style={{transform:'scale(1.2)', left:'23%'}} className='relative md:block'/>
         </article>
     )
 }

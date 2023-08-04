@@ -1,9 +1,11 @@
 import PresentationSection from "./components/PresentationSection"
+import ContributorsListSection from "./components/ContributorsListSection"
 
 export default function Home(){
     return(
-        <body className="pt-5 md:pt-0">
+        <section className="pt-5 md:pt-0">
             <PresentationSection />
-        </body>
+            <ContributorsListSection />
+        </section>
     )
 }
