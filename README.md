@@ -21,6 +21,7 @@ npm run dev
 ## Principales tecnologías utilizadas
 - React JS + Vite
 - Tailwind
+- Git
 
 ## Funcionalidades extras:
 Además de cumplir con los requisitos esperados, añadi un filtrador de datos en base a datos ingresados por el usuario, actualizando cada vez que el usuario realiza una acción, y un botón para resetear el estado.
