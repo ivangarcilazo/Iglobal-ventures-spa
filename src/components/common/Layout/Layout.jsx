@@ -1,5 +1,5 @@
 import { colors } from "../../utilsGeneral"
-import Header from "../header/Header"
+import Header from "../Header/Header"
 
 export default function Layout({children}){
     return(
