@@ -51,6 +51,7 @@ Con la intención de dar una visión un poco más amplia sobre mis habilidades, 
     - Para este endpoint se requiere del campo nombre de usuario (username), email (email) y contraseña (password).
     - Si el email ya está cargado en la base de datos, retornará error.
    - Endpoint 2 - loguearse
+
       - URL: https://iglobal-adventures-spa-backend.netlify.app/.netlify/functions/app/users/login
       - Metodos aceptados: POST
       - Para este endpoint se requiere del campo email (email) y contraseña (password).
@@ -74,3 +75,4 @@ Con la intención de dar una visión un poco más amplia sobre mis habilidades, 
       - Cada correo de usuario es único, por lo tanto si se intenta registrar un nuevo usuario con el mismo correo retornará un error.
       - Cada fecha es única, si se intenta agendar una fecha en un dia que esté ocupado por cualquier otro usuario retornará un error.
       - Toda contraseña está encriptada mediante bcrypt.
+
