@@ -3,9 +3,9 @@ import ContributorsListSection from "./components/ContributorsListSection"
 
 export default function Home(){
     return(
-        <section className="pt-5 md:pt-0">
+        <main className="pt-5 md:pt-0">
             <PresentationSection />
             <ContributorsListSection />
-        </section>
+        </main>
     )
 }
