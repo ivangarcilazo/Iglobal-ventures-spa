@@ -4,7 +4,7 @@ import Button from "../Button/Button"
 import { colors } from "../../utilsGeneral"
 import { useEffect } from "react"
 
-export default function FormScheduleContainer({inputs, onSubmit, error, handlerInputChange}){
+export default function FormScheduleContainer({inputs, onSubmit, error, handlerInputChange, loadingPost}){
     const { data, loading:loadingGet, getData } = useGet()
     useEffect(()=>{
       getData('https://jsonplaceholder.typicode.com/users')
@@ -62,7 +62,8 @@ export default function FormScheduleContainer({inputs, onSubmit, error, handlerI
 
           <div className="w-full text-white flex justify-between items-center gap-3">
             <Button label={"Submit"} background={colors.darkGrayishBlue} />
-            <span className="rounded" style={{backgroundColor:colors.red, color:colors.lightGrayishBlue}}>{error&&(error?.message)}</span>
+            {loadingPost&&<img className="" src="https://cdn.pixabay.com/animation/2022/07/29/03/42/03-42-22-68_512.gif" width={30} alt="loadingImage" />}
+            <span className="rounded pl-2 pr-2" style={{backgroundColor:colors.red, color:colors.lightGrayishBlue}}>{error&&(error?.message)}</span>
           </div>
 
         </form>

@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Layout from "./components/common/Layout/Layout"
 import ProviderAuth from "./components/common/Provider/ProviderAuth"
 import Home from "./pages/Home/Home"
-import Login from "./pages/Login/Login"
 import Agenda from "./pages/Agenda/Agenda"
+import LogRegUser from "./pages/LogRegUser/LogRegUser"
 
 function App() {
 
@@ -16,9 +16,9 @@ function App() {
               <Home />
             </Layout>} 
           />
-           <Route path="/login" element={
+           <Route path="/users/:action" element={
             <Layout>
-              <Login />
+              <LogRegUser />
             </Layout>} 
           />
            <Route path="/agenda" element={

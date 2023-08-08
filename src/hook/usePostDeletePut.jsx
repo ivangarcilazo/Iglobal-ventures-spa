@@ -11,7 +11,7 @@ export default function usePostDeletePut(){
         try {
             setLoading(true)
             
-            const response = await fetch(`http://127.0.0.1:3000/${url}`, {
+            const response = await fetch(`https://iglobal-adventures-spa-backend.netlify.app/.netlify/functions/app/${url}`, {
                 method: method,
                 headers:{
                     'Content-Type':'application/json'

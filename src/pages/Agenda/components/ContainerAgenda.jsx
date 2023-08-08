@@ -21,7 +21,7 @@ export default function ContainerAgenda({state}){
     useEffect(()=>{
         const getAgenda = async() =>{
             try {
-                const responseServer = await getData(`http://127.0.0.1:3000/schedule/get/${state.email}`)
+                const responseServer = await getData(`https://iglobal-adventures-spa-backend.netlify.app/.netlify/functions/app/schedule/get/${state.email}`)
 
                 if(responseServer){
                     setAgenda(responseServer)
@@ -125,7 +125,7 @@ const EditModal = ( {scheduleToEdit, agenda, setAgenda, setModalStatus}) => {
             value:scheduleToEdit.date.split('T')[0]
         }
     ])
-    const { manipulateData, error, setError } = usePostDeletePut()
+    const { manipulateData, error, setError, loading } = usePostDeletePut()
 
     const handlerChange = (e, index) => {
         
@@ -171,6 +171,6 @@ const EditModal = ( {scheduleToEdit, agenda, setAgenda, setModalStatus}) => {
     }
 
     return(
-       <FormScheduleContainer error={error} inputs={inputs} onSubmit={handlerUpdate} handlerInputChange={handlerChange} />
+       <FormScheduleContainer error={error} loadingPost={loading} inputs={inputs} onSubmit={handlerUpdate} handlerInputChange={handlerChange} />
     )
 }

@@ -22,11 +22,16 @@ const navigations = [
         label:'AGENDA',
         path:'/agenda',
         color:colors.veryDarkBlue
-    },{
+    },[{
         label:'LOGIN',
-        path:'/login',
+        path:'/users/login',
         color:colors.grayishBlue
     },
+    {
+        label:'REGISTER',
+        path:'/users/register',
+        color:colors.grayishBlue
+    }]
 ]
 
 export const LinkNavigations = () =>{
@@ -46,9 +51,9 @@ export const LinkNavigations = () =>{
         {
             navigations.map((element, index)=>(
                 <React.Fragment key={index}>
-                {element.label === 'LOGIN'?
+                {Array.isArray(element)?
                     <>
-                        <div key={`${index}LOGIN`} className="md:w-2 md:h-2 md:rounded-full w-full border" style={{backgroundColor:element.color}}></div>
+                        <div key={`${index}LOGIN`} className="md:w-2 md:h-2 md:rounded-full w-full border" style={{backgroundColor:colors.grayishBlue}}></div>
                         {
                             !userLogged?(
                                 <>
@@ -57,8 +62,9 @@ export const LinkNavigations = () =>{
                                 </>
 
                             ):(
-
-                                <Link className="font-barlowCondensed font-bold text-lg hover:underline" key={index} to={element.path} style={{color:element.color}} >{element.label}</Link>
+                                element.map((userLinks, index)=>(
+                                    <Link className="font-barlowCondensed font-bold text-lg hover:underline" key={index} to={userLinks.path} style={{color:userLinks.color}} >{userLinks.label}</Link>
+                                ))
 
                             )
                         }

@@ -96,7 +96,7 @@ const ScheduleDemo = ({setModal, state}) =>{
 
     ]
 
-    const { error, manipulateData, setError } = usePostDeletePut()
+    const { error, manipulateData, setError, loading } = usePostDeletePut()
     
     const handlerSubmit = async(dataForm) =>{
 
@@ -127,7 +127,7 @@ const ScheduleDemo = ({setModal, state}) =>{
     }
 
     return(
-        <FormScheduleContainer onSubmit={handlerSubmit} error={error} inputs={inputsToSchedule} />
+        <FormScheduleContainer onSubmit={handlerSubmit} loadingPost={loading} error={error} inputs={inputsToSchedule} />
     )
     
 }
