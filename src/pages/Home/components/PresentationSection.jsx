@@ -1,6 +1,6 @@
 import devices from '../../../assets/illustration-devices.svg'
 import { colors } from '../../../components/utilsGeneral'
-import Button from '../../../components/common/Button/Button'
+import TextContainer from './components/TextContainer'
 
 export default function PresentationSection(){
     return(
@@ -26,28 +26,3 @@ function ImageContainer(){
     )
 }
 
-function TextContainer(){
-    return(
-        <article className='flex flex-col gap-5'>
-                        
-            <div className='flex items-center gap-5'>
-                <span className='p-0 text-lg font-bold font-barlowCondensed pl-3 pr-3 rounded-2xl' style={{backgroundColor:colors.veryDarkBlue}}>NEW</span>
-                <span className='font-barlowCondensed text-xl tracking-widest' style={{color:colors.grayishBlue}}>MONOGRAPH &nbsp; DASHBOARD</span>
-            </div>
-
-            <div>
-                <span className='font-barlowCondensed text-5xl font-bold' style={{color:colors.veryDarkBlue}} >POWERFUL INSIGHTS <br/> INTO YOUR TEAM</span>
-            </div>
-
-            <div>
-                <span className='font-barlowCondensed text-xl' style={{color:colors.darkGrayishBlue}}>Proyect planing and time tracking <br/> for agile teams</span>
-            </div>
-
-            <div className='flex items-center justify-start gap-5'>
-                <Button label={'SCHEDULE A DEMO'} background={colors.red} />
-                <span className='font-barlowCondensed text-lg tracking-widest' style={{color:colors.grayishBlue}}>TO SEE A PREVIEW</span>
-            </div>
-
-        </article>
-    )
-}

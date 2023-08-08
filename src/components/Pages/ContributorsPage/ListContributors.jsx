@@ -4,12 +4,14 @@ import reset from '../../../assets/reset.svg'
 import { colors } from "../../utilsGeneral"
 
 export default function ListContributors(){
+
     const [ contributorsList, setContributorsList ] = useState([])
-    const { data, loading, error } = useGet('https://jsonplaceholder.typicode.com/users')
+    const { data, loading, error, getData } = useGet()
 
     useEffect(()=>{
-        setContributorsList(data)
-    }, [data])
+        getData('https://jsonplaceholder.typicode.com/users')
+            .then((res)=>{setContributorsList(res)})
+    }, [])
 
     const searchHandler = (e) => {
         const valueSearched = e.target.value.toLowerCase()
