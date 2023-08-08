@@ -45,12 +45,12 @@ Durante todo el proceso se utilizó Github para llevar una estructura ordenada y
 ## Endpoints personalizados:
 Con la intención de dar una visión un poco más amplia sobre mis habilidades, desarrollé una API con Node JS y MongoDB. A continuación presento sus rutas, y información que recibe el mismo endpoint.
 - ### Endpoints:
-  - Endpoint 1 - register user
+  - Endpoint 1 - registrar nuevo usuario
     - URL: https://iglobal-adventures-spa-backend.netlify.app/.netlify/functions/app/users/register
     - Metodos aceptados: POST
     - Para este endpoint se requiere del campo nombre de usuario (username), email (email) y contraseña (password).
     - Si el email ya está cargado en la base de datos, retornará error.
-   - Endpoint 2 - login user
+   - Endpoint 2 - loguearse
       - URL: https://iglobal-adventures-spa-backend.netlify.app/.netlify/functions/app/users/login
       - Metodos aceptados: POST
       - Para este endpoint se requiere del campo email (email) y contraseña (password).
